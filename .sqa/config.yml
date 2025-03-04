@@ -1,0 +1,20 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/repo5:
+      branch: branch8
+      repo: https://github.com/repo5
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  env1: val1
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/repo5 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-grey-akbash.sh
+        container: qc.acc_stinky-violet-magpie
+timeout: 5400
